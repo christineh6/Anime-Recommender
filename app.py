@@ -4,10 +4,10 @@ from recs import get_recommendations
 app = Flask(__name__)
 
 @app.route('/')
-def index()
+def index():
 	return render_template('index.html')
 
-@app.route('/recommend'. methods=['post'])
+@app.route('/recommend', methods=['post'])
 def recommmend():
 	anime_title = request.form['title']
 	recommendations = get_recommendations(anime_title)
